@@ -1,0 +1,10 @@
+C:\C#\4.0\Window Title\bin\Debug\Window Title.exe.config
+C:\C#\4.0\Window Title\bin\Debug\Window Title.exe
+C:\C#\4.0\Window Title\bin\Debug\Window Title.pdb
+C:\C#\4.0\Window Title\obj\Debug\Window Title.csprojAssemblyReference.cache
+C:\C#\4.0\Window Title\obj\Debug\Window_Title.Window.resources
+C:\C#\4.0\Window Title\obj\Debug\Window_Title.Properties.Resources.resources
+C:\C#\4.0\Window Title\obj\Debug\Window Title.csproj.GenerateResource.cache
+C:\C#\4.0\Window Title\obj\Debug\Window Title.csproj.CoreCompileInputs.cache
+C:\C#\4.0\Window Title\obj\Debug\Window Title.exe
+C:\C#\4.0\Window Title\obj\Debug\Window Title.pdb

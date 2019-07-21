@@ -1,39 +1,38 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Windows_Text_Search
+namespace Window_Title
 {
     public partial class Window : Form
     {
-        const int sizeMax = 1000000;
+
         Text txt = new Text();
         Filter flt = new Filter();
-
         public Window()
         {
             InitializeComponent();
+            openFileDialog.Filter = "Text files(*.txt)|* txt|All files(*.*)|*.*";
         }
 
-        private void Btn_file_Click(object sender, EventArgs e)
+        private void BtnFile_Click(object sender, EventArgs e)
         {
-            if (openFile.ShowDialog() == DialogResult.OK)
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                string[] textFile = txt.readFile(openFile.FileName, sizeMax);
-                writeBox(textFile);
+                txt.readFile(openFileDialog.FileName);
+                writeBox(txt.textFile);
             }
         }
-        public void writeBox(string[] textFile)
-        {
-            mainBox.Lines = textFile;
-        }
 
-        private void Btn_apply_Click(object sender, EventArgs e)
+        private void writeBox(string[] writeFile)
         {
-            TextBox[] textBox = new TextBox[4] { textBoxA, textBoxB, textBoxC, textBoxD };
-            ComboBox[] comboBox = new ComboBox[4] { comboBoxA, comboBoxB, comboBoxC, comboBoxD };
-            string[] textFile = flt.check_flt(textBox, comboBox, mainBox.Lines);
-            writeBox(textFile);
-
+            mainTextBox.Lines = writeFile;
         }
 
         private void Window_DragDrop(object sender, DragEventArgs e)
@@ -44,8 +43,8 @@ namespace Windows_Text_Search
                 string[] s = (string[])e.Data.GetData(DataFormats.FileDrop);
                 foreach (string str in s)
                     filename += str;
-                string[] textFile = txt.readFile(filename, sizeMax);
-                writeBox(textFile);
+                txt.readFile(filename);
+                writeBox(txt.textFile);
             }
         }
 
@@ -53,6 +52,19 @@ namespace Windows_Text_Search
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
                 e.Effect = DragDropEffects.Copy;
+        }
+
+        private void BtnApply_Click(object sender, EventArgs e)
+        {
+            if (txt.textFile == null)
+            {
+                MessageBox.Show("Вы не загрузили текстовый файл. Исправьте это пожалуйста!");
+                return;
+            }
+            TextBox[] txtBox = new TextBox[4] { textBoxA, textBoxB, textBoxC, textBoxD };
+            ComboBox[] cmbBox = new ComboBox[4] { comboBoxA, comboBoxB, comboBoxC, comboBoxD };
+            string [] fltText = flt.apllyFlt(txtBox, cmbBox, txt.textFile);
+            writeBox(fltText);
         }
     }
 }

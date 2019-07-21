@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Windows_Text_Search
+namespace Window_Title
 {
     static class Program
     {

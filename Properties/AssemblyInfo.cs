@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов для изменения сведений,
 // связанных со сборкой.
-[assembly: AssemblyTitle("Windows Text Search")]
+[assembly: AssemblyTitle("Window Title")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Windows Text Search")]
+[assembly: AssemblyProduct("Window Title")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-[assembly: Guid("af033711-dd69-411c-8465-8d37c093bdcd")]
+[assembly: Guid("35e108cf-0ce5-45ea-b46b-10523cd6dab1")]
 
 // Сведения о версии сборки состоят из указанных ниже четырех значений:
 //

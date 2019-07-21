@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Windows_Text_Search.Properties
+namespace Window_Title.Properties
 {
 
 
